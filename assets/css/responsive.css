@@ -1,0 +1,222 @@
+/* Mobile and Tablet */
+@media(max-width: 1023px) {
+    .header{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    .header__mobile-menu{
+        margin: 0 16px;
+        display: block;
+    }
+    .app__container{
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+    :root{
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .header__cart-list{
+        position: fixed;
+        right: 0;
+        width: 100%;
+        top: var(--header-height);
+        padding: 0 calc((100% - 644px) / 2);
+    }
+    .header__cart-list::before{
+        display: none;
+    }
+    .header__sort-bar{
+        display: flex;
+    }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+    .header__cart-icon{
+        margin: 8px -15px;
+        margin-left: 24px;
+    }
+    .header__cart{
+        text-align: right;
+    }
+    .header__cart-notice{
+        right: -25px;    
+    }
+    .category{
+        display: none;
+    }
+    
+}
+/* Mobile */
+@media (max-width: 739px){
+    :root{
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+    .all-search{
+        display: block;
+    }
+    .category-item:nth-of-type(3n + 1) .category-item__link{
+        background-color: #87AFD8;
+    }
+    
+    .category-item:nth-of-type(3n + 2) .category-item__link{
+        background-color: #76c9bd;
+    }
+    
+    .category-item:nth-of-type(3n + 3) .category-item__link{
+        background-color: #88cf81;
+    }
+    .category{
+        background-color: transparent;
+    }
+    .category-list{
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        overflow-x: auto;
+    }
+    .category-list::-webkit-scrollbar{
+        display: none;
+    }
+    .category-item:before{
+        display: none;
+    }
+    .category-item{
+        margin: 0 3px;
+    }
+    .category-item__link{
+        position: relative;
+        border-radius: 3px;
+        text-align: center;
+        padding: 4px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-weight: 200;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color:transparent;
+        width: 100px;
+        height: 46px;
+        color: var(--white-color);
+        bottom: 0;
+    }
+    .category-item__link:hover{
+        bottom: 0;
+        right: 0;
+        color: var(--primary-color);
+    }
+
+    .category-item__link::before{
+        display: none;
+    }
+
+    
+    .category-item-active .category-item__link{
+        color: #fff;
+        font-weight: 500;
+        border: 1px solid #000;
+    }
+
+    .category__heading{
+        display: none;
+    }
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+    .header-with-search{
+        justify-content: space-between;
+    }
+    .header__logo{
+        width: unset;
+    }
+
+    .header__cart{
+        -webkit-tap-highlight-color:transparent;
+    }
+    .header__cart-icon{
+        margin: 8px 0px
+    }
+    .header__cart-notice{
+        right: 0px;
+    }
+    .mobile-category{
+        display: none;
+    }
+    .header__search{
+        position: fixed;
+        top: var(--header-height);
+        height: 46px;
+        right: 0;
+        left: 0;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
+        z-index: 11;
+        padding: 0 16px;
+        display: none;
+    }
+    
+    .app__content{
+        margin: 0 4px;
+        padding: 0;
+    }
+    .header-with-search{
+        height: 60px
+    }
+    .header__logo-img{
+        width: 120px;
+    }
+    .header__cart-notice{
+        line-height:0.9rem;
+        font-size: 1.2rem;
+    }
+    .header__cart-icon{
+        font-size: 2.1rem;
+    }
+    .header__mobile-menu-icon{
+        font-size: 2.1rem;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1px
+    }
+
+    .footer__bottom-on-list{
+        display: block;
+    }
+    .footer__bottom-on-list-item-countries{
+        margin-left: 0;
+        text-align: justify;
+    }
+    .footer__bottom-policy-list{
+        display: block;
+    }
+    @keyframes mobileSearchSideIn {
+        from{
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to{
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
+    .pagination-item__link{
+        min-width: 35px;
+        margin: 0;
+        height: 28px;
+    }
+    
+}
